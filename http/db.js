@@ -26,5 +26,27 @@ module.exports = {
       //释放链接
       res.release()
     })
+  },
+  //异步回调
+  SySqlconnection: function (sql, sqlArr) {
+    return new Promise((reslove, reject) => {
+      const pool = mysql.createPool(this.config)
+      pool.getConnection((err, res) => {
+        if (err) {
+          reject(err)
+        } else {
+          //事件驱动回调
+          res.query(sql, sqlArr, (err, data) => {
+            if (err) {
+              reject(err)
+            } else {
+              reslove(JSON.parse(JSON.stringify(data)))
+            }
+          })
+          //释放链接
+          res.release()
+        }
+      })
+    }).catch((err) => { console.log(err) })
   }
 }
