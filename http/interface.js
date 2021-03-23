@@ -7,9 +7,6 @@
 const app = require("express").Router();
 const api = require('../src/api/index')
 
-// 查询
-app.get('/user', api.user)
-
 //分页
 app.get('/lists', api.lists)
 

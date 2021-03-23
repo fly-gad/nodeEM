@@ -7,10 +7,11 @@ const mysql = require('mysql');
 
 module.exports = {
   config: {
-    host: '47.94.91.103',
+    host: 'localhost',
     user: 'root',
-    password: 'Shuai123*',
-    database: 'backstage',
+    password: '123456',
+    database: 'frontdesk',
+    // database: 'backstage',
     port: '3306'
   },
   //使用连接池方式链接mysql数据库
