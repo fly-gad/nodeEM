@@ -4,7 +4,7 @@
  * @Description: 环境变量
  */
 const env = {
-    hostname: '127.0.0.1',
+    hostname: '0.0.0.1',
     port: '8001',
 }
 module.exports = { env }

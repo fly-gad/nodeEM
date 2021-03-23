@@ -46,7 +46,7 @@ app.use('/api', video);
 
 //引入环境变量
 const { env } = require('./http/env')
-//启动服务，端口3000
+//启动服务
 app.listen(env.port, env.hostname, () => {
   console.log(`服务器运行在 http://${env.hostname}:${env.port}/`)
 })

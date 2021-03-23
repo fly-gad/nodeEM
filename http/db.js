@@ -7,9 +7,9 @@ const mysql = require('mysql');
 
 module.exports = {
   config: {
-    host: 'localhost',
+    host: '47.94.91.103',
     user: 'root',
-    password: '123456',
+    password: 'Shuai123*',
     database: 'frontdesk',
     // database: 'backstage',
     port: '3306'
